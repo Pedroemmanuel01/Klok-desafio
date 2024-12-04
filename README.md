@@ -101,21 +101,21 @@ WHERE
 
 ## **Explicação do Código**
 
-## ** Objetivo**
+### ** Objetivo**
 Este código tem como objetivo listar os clientes e suas apólices ativas, com informações detalhadas sobre o tipo de seguro e o valor do prêmio.
 
-##** Colunas Selecionadas**
+### ** Colunas Selecionadas**
 - **clientes.nome**: Nome do cliente.
 - **apólices.numero**: Número da apólice associada ao cliente.
 - **apólices.tipo**: Tipo de seguro vinculado à apólice.
 - **apólices.valor**: Valor do prêmio da apólice.
 
-##**Relacionamento entre Tabelas**
+### **Relacionamento entre Tabelas**
 As tabelas **clientes** e **apólices** estão relacionadas pelo campo **cliente_id** na tabela **apólices**, que referencia o campo **id** da tabela **clientes**.
 
-##** Condição Aplicada**
+### ** Condição Aplicada**
 O código filtra apenas as apólices com status **ativa** (`apólices.status = 'ativa'`).
 
-##** Localização do Código**
+### ** Localização do Código**
 O script SQL está salvo no arquivo `SeguraTudo.txt`, disponível no diretório do projeto.
 
