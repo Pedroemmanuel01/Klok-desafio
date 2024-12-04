@@ -7,10 +7,9 @@ Este projeto automatiza testes para verificar a funcionalidade de busca de produ
 
 1. [Casos de Teste Implementados](#casos-de-teste-implementados)
 2. [Pré-requisitos](#pré-requisitos)
-3. [Estrutura do Projeto](#estrutura-do-projeto)
-4. [Explicação do Código](#explicação-do-código)
-5. [Código SQL](#código-sql)  
-6. [Explicação do Código](#explicação-do-código)  
+3. [Explicação do Código](#explicação-do-código)
+4. [Código SQL](#código-sql)  
+5. [Explicação do Código](#explicação-do-código)  
 
 ## **Casos de Teste Implementados**
 
@@ -37,22 +36,6 @@ Este projeto automatiza testes para verificar a funcionalidade de busca de produ
 - Navegador compatível com o Cypress instalado (Chromium, Edge, etc.)
 
 ---
-
-## **Estrutura do Projeto**
-
-klok-desafio/ 
-│ 
-├── cypress/ 
-│ ├── e2e/ 
-│ │ ├── search.cy.js # Casos de teste 
-│ ├── support/ 
-│ │ ├── commands.js # Métodos de suporte (funções reutilizáveis) 
-│ │ │ ├── front.js # Funções de suporte adicionais 
-│ │ ├── pageElements.js # Seletores de elementos do DOM 
-│ ├── fixtures/ # Dados de teste (não usado neste projeto) 
-├── cypress.config.js # Configuração do Cypress 
-├── package.json # Dependências do projeto 
-├── README.md # Documentação do projeto
 
 ## **Explicação do Código**
 
@@ -101,10 +84,10 @@ WHERE
 
 ## **Explicação do Código**
 
-### ** Objetivo**
+### **Objetivo**
 Este código tem como objetivo listar os clientes e suas apólices ativas, com informações detalhadas sobre o tipo de seguro e o valor do prêmio.
 
-### ** Colunas Selecionadas**
+### **Colunas Selecionadas**
 - **clientes.nome**: Nome do cliente.
 - **apólices.numero**: Número da apólice associada ao cliente.
 - **apólices.tipo**: Tipo de seguro vinculado à apólice.
@@ -113,9 +96,9 @@ Este código tem como objetivo listar os clientes e suas apólices ativas, com i
 ### **Relacionamento entre Tabelas**
 As tabelas **clientes** e **apólices** estão relacionadas pelo campo **cliente_id** na tabela **apólices**, que referencia o campo **id** da tabela **clientes**.
 
-### ** Condição Aplicada**
+### **Condição Aplicada**
 O código filtra apenas as apólices com status **ativa** (`apólices.status = 'ativa'`).
 
-### ** Localização do Código**
+### **Localização do Código**
 O script SQL está salvo no arquivo `SeguraTudo.txt`, disponível no diretório do projeto.
 
